@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.amigotech.com.br/amigo-apps/doca-ui/min.css">
+    <link rel="stylesheet" href=style.css>
+
+  </head>
+  <body>
+    <div class="doca">
+      <div class="doca-date-filter">
+        
+        <input
+          class="doca-date-filter__input"
+          type="date"
+          id="startDate"
+        ></input>
+
+        <input
+          class="doca-date-filter__input"
+          type="date"
+          id="endDate"
+        ></input>
+      
+        <button class="doca-date-filter__button" onclick="searchBox(event)">
+          procurar
+        </button>
+      </div>
+      <button class="doca-button doca-button--dark" id = "button">Tabela completa</button>
+      <div class="doca-form__field">
+        <label class="doca-form__label">
+          Convênio
+        </label>
+        <div class="">
+          <select
+            class ="doca-form-control"
+            type="text"
+            id = "select"
+            onchange="searchBox(event)"
+          >
+            <option value = "0">Todas as opções.</option>
+          </select>
+        </div>
+      </div>
+      
+    <div class="doca-form__field">
+    <label class="doca-form__label">
+      
+    </label>
+    <div class="doca-form-control__icon-container">
+      <label class="doca-form__label">
+        Pesquisa
+      </label>
+      <input onkeyup="searchBox(event)" class="doca-form-control" type="text" id = "search" placeholder="Digite o que deseja encontrar.">
+    </div>
+  </div>
+
+      <table class="doca-table">
+        <thead>
+          <tr class = "tr">
+            <th scope="col">
+              Data
+            </th>
+            <th scope="col">
+              Número
+            </th>
+            <th scope="col">
+              <button class="doca-icon doca-icon__sort-up doca-icon--solid" id="sortUp"></button>
+              Paciente
+            </th>
+            <th scope="col">
+              Convênio
+            </th>
+            <th scope="col">
+              Preço
+            </th>
+          </tr>
+        </thead>
+        <tbody class = "table">
+        </tbody>
+      </table>
+      <div id="pagination" style="text-align: center;"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
